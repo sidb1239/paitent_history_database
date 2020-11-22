@@ -1,0 +1,19 @@
+pragma solidity ^ 0.4.17 < 0.6.12;
+contract paitent01 {
+    string fullName;
+    uint DOB;
+    uint current_age;
+    string gender;
+    string placeOfResidence;
+    
+    function paitent01( string newfullName, uint newDOB, uint newcurrent_age, string newgender, string newplaceOfResidence)public{
+        fullName = newfullName;
+        DOB =newDOB;
+        current_age = newcurrent_age;
+        gender = newgender;
+        placeOfResidence = newplaceOfResidence;
+    }
+    function getdetails() public view returns( string,uint,uint,string,string){
+        return( fullName,DOB,current_age,gender,placeOfResidence);
+    }
+}
